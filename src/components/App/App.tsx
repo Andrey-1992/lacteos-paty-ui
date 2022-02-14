@@ -1,12 +1,10 @@
 import React from 'react';
 import './App.css';
 
-function App() {
+export const App = () => {
   return (
     <div className="App">
       <h1>Lacteos Paty</h1>
     </div>
   );
 }
-
-export default App;

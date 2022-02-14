@@ -7,4 +7,4 @@ export const App: React.FC = () => {
       <h1>Lacteos Paty</h1>
     </div>
   );
-}
+};

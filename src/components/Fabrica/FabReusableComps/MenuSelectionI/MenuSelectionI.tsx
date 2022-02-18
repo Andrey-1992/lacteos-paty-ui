@@ -9,7 +9,6 @@ interface Props {
 export const MenuSelectionI: React.FC<Props> = ({firstSection, secondSection}) => {
   return (
     <div className="MenuSelectionI">
-      <h1>MenuSelectionI</h1>
       <h2>{firstSection}</h2>
       <h2>{secondSection}</h2>
     </div>

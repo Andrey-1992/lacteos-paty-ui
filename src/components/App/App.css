@@ -1,8 +1,23 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  /* display: flex; */
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
+.menu-text {
+  border: solid black 5px;
+  border-style: double;
+  padding: 2% 4% 2% 4%;
+  margin: 3%;
+  font-size: xx-large;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +50,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

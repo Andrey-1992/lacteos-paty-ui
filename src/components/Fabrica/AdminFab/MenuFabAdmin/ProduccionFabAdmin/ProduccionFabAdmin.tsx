@@ -4,7 +4,7 @@ import './ProduccionFabAdmin.css';
 export const ProduccionFabAdmin: React.FC = () => {
   return (
     <div className="ProduccionFabAdmin">
-      <p>ProduccionFabAdmin</p>
+      <p>Admin - Fab - Produccion - Menu Principal</p>
     </div>
   );
 };

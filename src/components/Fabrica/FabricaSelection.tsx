@@ -4,7 +4,7 @@ import './Fabrica.css';
 export const Fabrica: React.FC = () => {
   return (
     <div className="fabrica">
-      <p>Fabrica</p>
+      <p>Admin vs Production (MNenu Selection)</p>
     </div>
   );
 };

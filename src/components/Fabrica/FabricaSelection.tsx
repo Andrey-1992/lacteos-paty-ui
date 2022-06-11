@@ -1,10 +1,11 @@
 import React from 'react';
-import './Fabrica.css';
+import './FabricaSelection.css';
 
-export const Fabrica: React.FC = () => {
+export const FabricaSelection: React.FC = () => {
   return (
     <div className="fabrica">
-      <p>Admin vs Production (MNenu Selection)</p>
+      <p>Administacion</p>  
+      <p>Produccion</p>
     </div>
   );
 };

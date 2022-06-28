@@ -5,11 +5,11 @@ import { NavLink } from 'react-router-dom';
 export const FabVsDistribucion: React.FC = () => {
   return (
     <div className="fabVsProd">
-      <NavLink className='go-distribucion-register' to="/">
-        <p>Distribucion</p>  
+      <NavLink to="/">
+        <p className='go-distribucion-register'>Distribucion</p>  
       </NavLink>
-      <NavLink className='go-fabrica-register' to="/fabrica-registro">
-        <p>Fabrica</p>
+      <NavLink to="/fabrica-registro">
+        <p className='go-fabrica-register'>Fabrica</p>
       </NavLink>
     </div>
   );

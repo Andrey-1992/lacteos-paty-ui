@@ -1,0 +1,33 @@
+.go-main-menu-prod-admin {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  /* font-style:inherit; */
+  font-size: 200%;
+  border-style:solid;
+  border-radius: 3%;
+  padding: 2% 0% 2% 0%;
+  border-color:gray;
+  margin: 10% 40% 0% 40%;
+  color: black;
+}
+
+.go-main-menu-prod-admin:hover{
+  font-style:oblique;
+}
+
+.go-main-menu-inv-admin {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  /* font-style:inherit; */
+  font-size: 200%;
+  border-style:solid;
+  border-radius: 3%;
+  padding: 2% 0% 2% 0%;
+  border-color:gray;
+  margin: 10% 40% 0% 40%;
+  color: black;
+}
+
+.go-main-menu-inv-admin:hover{
+  font-style:oblique;
+}

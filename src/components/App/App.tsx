@@ -14,11 +14,10 @@ import { CrearReporteProdAdmin } from '../Fabrica/AdminFab/MenuFabAdmin/Producci
 export const App: React.FC = () => {
   return (
     <div className="App">
-      <h1>Lacteos Paty Principal</h1>
       <Switch>
         <Route exact path="/" render={() => <FabVsDistribucion />}/>
         <Route exact path="/fabrica-registro" render={() => <FabricaSelection />}/>
-        <Route exact path="/go-fad-sign-in" render={() => <AdminSignIn />}/>
+        <Route exact path="/go-fad-sign-admin-in" render={() => <AdminSignIn />}/>
         <Route exact path="/go-main-menu-fab-admin" render={() => <MenuFabAdmin />}/>
         <Route exact path="/go-main-menu-prod-admin" render={() => <ProduccionFabAdmin/>}/>
         <Route exact path="/go-menu-entradas-prod-admin" render={() => <MenuInProdFab />}/>

@@ -5,12 +5,12 @@ import { NavLink } from 'react-router-dom';
 export const FabricaSelection: React.FC = () => {
   return (
     <div className="fabrica">
-      <NavLink className='go-fad-sign-in' to="/go-fad-sign-in">
-        <p>Administacion</p>  
+      <NavLink to="/go-fad-sign-admin-in">
+        <p className='go-fad-admin-sign-in'>Administacion</p>  
       </NavLink> 
-      <p>Produccion</p>
-      <NavLink className='go-fad-dis-menu' to="/">
-        <p>Menu Inicial</p>
+      <p className='go-fad-prod-sign-in'>Produccion</p>
+      <NavLink to="/">
+        <p className='go-fad-dis-menu'>Menu Inicial</p>
       </NavLink>
     </div>
   );

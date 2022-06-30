@@ -1,0 +1,29 @@
+.crear-reporte-queso-marco {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-style:solid;
+  /* font-size: 100%; */
+  border-style:solid;
+  border-radius: 4%;
+  /* padding: 1% 10% 1% 0%; */
+  /* border-color:gray; */
+  margin: 2% 35% 2% 35%;
+  color: black;
+}
+
+.crear-reporte-queso-enviar-btn {
+  margin: 5%;
+}
+
+.go-menu-entradas-prod-admin-ii{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  /* font-style:inherit; */
+  font-size: 100%;
+  border-style:solid;
+  border-radius: 4%;
+  padding: 1% 0% 1% 0%;
+  border-color:gray;
+  margin: 0% 45% 10% 45%;
+  color: black;
+}

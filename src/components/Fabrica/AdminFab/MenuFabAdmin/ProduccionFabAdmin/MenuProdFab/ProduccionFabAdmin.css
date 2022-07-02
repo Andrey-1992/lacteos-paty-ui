@@ -1,4 +1,4 @@
-.go-main-menu-prod-admin {
+.go-menu-entradas-prod-admin {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   /* font-style:inherit; */
@@ -11,11 +11,11 @@
   color: black;
 }
 
-.go-main-menu-prod-admin:hover{
+.go-menu-entradas-prod-admin:hover{
   font-style:oblique;
 }
 
-.go-main-menu-inv-admin {
+.go-menu-salidas-prod-admin {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   /* font-style:inherit; */
@@ -28,6 +28,23 @@
   color: black;
 }
 
-.go-main-menu-inv-admin:hover{
+.go-menu-salidas-prod-admin:hover{
+  font-style:oblique;
+}
+
+.go-main-menu-fab-admin {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  /* font-style:inherit; */
+  font-size: 100%;
+  border-style:solid;
+  border-radius: 4%;
+  padding: 1% 0% 1% 0%;
+  border-color:gray;
+  margin: 8% 45% 10% 45%;
+  color: black;
+}
+
+.go-main-menu-fab-admin:hover{
   font-style:oblique;
 }

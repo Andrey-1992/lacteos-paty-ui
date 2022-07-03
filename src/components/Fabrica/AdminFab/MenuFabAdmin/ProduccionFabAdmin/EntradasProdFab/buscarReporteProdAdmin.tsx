@@ -20,6 +20,12 @@ export const BuscarReporteProdAdmin: React.FC = () => {
     {Name:'2027', Value: '2027'}, {Name:'2028', Value: '2028'}, {Name:'2029', Value: '2029'}, {Name: '2030', Value: '2030'}
   ];
 
+  const readProdRecords = (event: { preventDefault: () => void; }): void => {
+    event.preventDefault();
+    console.log(selectedMonth, selectedYear)
+    // fetchProdRecordsByDate(selectedMonth, selectedYear);
+  }
+
   return (
     <div className="fabrica">
       <form className="top-filter-search-prods">
@@ -39,7 +45,7 @@ export const BuscarReporteProdAdmin: React.FC = () => {
           ))}
           </select>
           <br></br>
-          <button className='crear-reporte-queso-enviar-btn'>Buscar Reportes</button>
+          <button className='read-prod-records-btn' onClick={readProdRecords}>Buscar Reportes</button>
         </div>
       </form>
       <NavLink className='go-menu-entradas-prod-admin' to="/go-menu-entradas-prod-admin">

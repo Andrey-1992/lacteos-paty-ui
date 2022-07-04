@@ -2,10 +2,13 @@ import React from 'react';
 import './buscarReporteProdAdmin.css';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
+import { fetchAllProdRecords } from '../FetchProductionRecords';
+import { ProdCardsOverview } from './prodCardsOverview';
 
 export const BuscarReporteProdAdmin: React.FC = () => {
   const [ selectedMonth, setSelectedMonth ] = useState<any>();
   const [ selectedYear, setSelectedYear ] = useState<any>();
+  const [fetchedRecords, setFetchedRecords] = useState<any>()
 
   const monthSelection = [
     {Name:'Seleccione Mes', Value:''}, {Name:'Enero', Value: '01'}, {Name:'Febrero', Value: '02'},{Name:'Marzo', Value: '03'},
@@ -20,11 +23,68 @@ export const BuscarReporteProdAdmin: React.FC = () => {
     {Name:'2027', Value: '2027'}, {Name:'2028', Value: '2028'}, {Name:'2029', Value: '2029'}, {Name: '2030', Value: '2030'}
   ];
 
+  const filterDataByDate = (data:any): void => {
+    const dataFiltered = data.reduce((acc:any, dataRecords: any) => {
+      const yearData = dataRecords.datein.split('-')[0];
+      const monthData = dataRecords.datein.split('-')[1]
+      if (yearData === selectedYear && monthData === selectedMonth) {
+        acc.push(dataRecords)
+      }
+      return acc;
+    }, [])
+    setFetchedRecords(dataFiltered);
+    // console.log(fetchedRecords)
+  }
+
+  const makeFetch = (): void => {
+    fetchAllProdRecords()
+    .then(data => filterDataByDate(data))
+    .catch(error => console.log(error))
+  }
+
   const readProdRecords = (event: { preventDefault: () => void; }): void => {
     event.preventDefault();
-    console.log(selectedMonth, selectedYear)
-    // fetchProdRecordsByDate(selectedMonth, selectedYear);
+    makeFetch();
+    // console.log(fetchedRecords)
   }
+
+  // const newsCardOver = fetchedRecords.map(prodRecords => <ProdCardsOverview filteredRecords={} key={} changeViewStatus={} />)
+  // if (fetchedRecords) {
+  //   const prodCardOver = fetchedRecords.map((prodRecords: any) => <ProdCardsOverview filteredRecords={prodRecords}/>)
+  // }
+  if (fetchedRecords) {
+    const prodCardOver = fetchedRecords.map((fetchedRecords: any) => <ProdCardsOverview filteredRecords={fetchedRecords}/>)
+    return (
+      <div className="fabrica">
+        <form className="top-filter-search-prods">
+          <div className="crear-reporte-queso-marco">
+            <select className="select-month-search" onChange={(event) => setSelectedMonth(event.target.value)}>
+            {monthSelection.map(list => (
+              <option className="option-date-style" value={list.Value}>
+                {list.Name}
+              </option>
+            ))}
+            </select>
+            <select className="select-year-search" onChange={(event) => setSelectedYear(event.target.value)}>
+            {yearSelection.map(list => (
+              <option className="option-date-style" value={list.Value}>
+                {list.Name}
+              </option>
+            ))}
+            </select>
+            <br></br>
+            <button className='read-prod-records-btn' onClick={readProdRecords}>Buscar Reportes</button>
+          </div>
+        </form>
+        {/* {fetchedRecords ? <p>{fetchedRecords[0].quesoname}</p> : <p>No hay records dentro de esta feacha</p>} */}
+        {fetchedRecords ? <p>{prodCardOver}</p> : <p>No hay records dentro de esta feacha</p>}
+        <NavLink className='go-menu-entradas-prod-admin' to="/go-menu-entradas-prod-admin">
+          <p>Menu Entradas</p>
+        </NavLink>
+      </div>
+    );
+  }
+
 
   return (
     <div className="fabrica">
@@ -48,6 +108,8 @@ export const BuscarReporteProdAdmin: React.FC = () => {
           <button className='read-prod-records-btn' onClick={readProdRecords}>Buscar Reportes</button>
         </div>
       </form>
+      {/* {fetchedRecords ? <p>{fetchedRecords[0].quesoname}</p> : <p>No hay records dentro de esta feacha</p>} */}
+      {fetchedRecords ? <p>prodCardOver</p> : <p>No hay records dentro de esta feacha</p>}
       <NavLink className='go-menu-entradas-prod-admin' to="/go-menu-entradas-prod-admin">
         <p>Menu Entradas</p>
       </NavLink>

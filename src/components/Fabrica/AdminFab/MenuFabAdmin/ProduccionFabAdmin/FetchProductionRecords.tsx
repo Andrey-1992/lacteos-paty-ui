@@ -12,6 +12,20 @@ export const fetchAllProdRecords = async () => {
   }
 }
 
+// export const getProdRecordsByDate = async (month: string, year: string) => {
+//   try {
+//     const response = await fetch(`http://localhost:4000/inventario-quesos-by-date/${month}/${year}`)
+//     if (!response.ok || response.status === 500) {
+//       throw Error('Error fetching all factory production records')
+//     }
+//     const data = await response.json()
+//     console.log(data)
+//     return data
+//   } catch(err) {
+//     return err;
+//   }
+// }
+
 
 
 

@@ -6,11 +6,28 @@ import { fetchAllProdRecords } from '../FetchProductionRecords';
 import { ProdCardsOverview } from './prodCardsOverview';
 import { EditarReporteProdAdmin } from './editarReporteProdAdmin';
 
+interface RecordBody {
+  id?: number,
+  quesoname?: string,
+  quesostatus?: string,
+  quesoavailability?: boolean,
+  nopieces?: number,
+  nopiecessalida?: number,
+  weigth?: number,
+  weigthcurrent?: number,
+  holladas?: number,
+  datein?: string,
+  dateout?: string ,
+  price?: number,
+  approvepord?: string
+}
+
 export const BuscarReporteProdAdmin: React.FC = () => {
   const [ selectedMonth, setSelectedMonth ] = useState<any>();
   const [ selectedYear, setSelectedYear ] = useState<any>();
   const [ fetchedRecords, setFetchedRecords] = useState<any>();
   const [ detailedView, setDetailedView] = useState<boolean>(false);
+  const [ selectedRecordById, setSelectedRecordById] = useState<RecordBody>();
 
   const monthSelection = [
     {Name:'Seleccione Mes', Value:''}, {Name:'Enero', Value: '01'}, {Name:'Febrero', Value: '02'},{Name:'Marzo', Value: '03'},
@@ -50,12 +67,16 @@ export const BuscarReporteProdAdmin: React.FC = () => {
     // console.log(fetchedRecords)
   }
 
-  const changeViewStatus = (viewStatus?: string): void => {
-    // console.log('true12')
-    // console.log(viewStatus)
+  const changeViewStatus = (viewStatus?: string, prodId?: number): void => {
     if (viewStatus === 'detailedView') {
+      const selectedRecod = fetchedRecords.filter((fetchedRecords: any) => fetchedRecords.id === prodId);
+      // console.log(selectedRecod)
+      setSelectedRecordById(selectedRecod[0])
+      console.log(selectedRecordById)
       setDetailedView(true)
-      // console.log('true')
+    }
+    if (viewStatus === 'overView') {
+      setDetailedView(false)
     }
   }
 
@@ -83,7 +104,7 @@ export const BuscarReporteProdAdmin: React.FC = () => {
             <button className='read-prod-records-btn' onClick={readProdRecords}>Buscar Reportes</button>
           </div>
         </form>
-        {!detailedView ? <p>{prodCardOver}</p> : <EditarReporteProdAdmin />}
+        {!detailedView ? <p>{prodCardOver}</p> : <EditarReporteProdAdmin selectedRecord={selectedRecordById} changeViewStatus={changeViewStatus}/>}
         <NavLink className='go-menu-entradas-prod-admin' to="/go-menu-entradas-prod-admin">
           <p>Menu Entradas</p>
         </NavLink>

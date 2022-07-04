@@ -2,6 +2,7 @@ import './prodCardsOverview.css';
 import React from 'react';
 
 interface RecordBody {
+  id?: number,
   quesoname?: string,
   quesostatus?: string,
   quesoavailability?: boolean,
@@ -19,7 +20,7 @@ interface RecordBody {
 interface Props {
   filteredRecords: RecordBody;
   // detailedView: (viewStatus: string, articleTitle?: string) => void;
-  changeViewStatus: (viewStatus?: string) => void;
+  changeViewStatus: (viewStatus?: string, prodId?: number) => void;
 }
 
 export const ProdCardsOverview: React.FC<Props> = ({filteredRecords, changeViewStatus}) => {
@@ -32,8 +33,8 @@ export const ProdCardsOverview: React.FC<Props> = ({filteredRecords, changeViewS
   const sendStatus = (event: { preventDefault: () => void; }):void => {
     // changeViewStatus('detailed')
     event.preventDefault()
-    // console.log('test56')
-    changeViewStatus('detailedView');
+    // console.log(filteredRecords.id)
+    changeViewStatus('detailedView', filteredRecords.id);
   }
 
   if (filteredRecords) {

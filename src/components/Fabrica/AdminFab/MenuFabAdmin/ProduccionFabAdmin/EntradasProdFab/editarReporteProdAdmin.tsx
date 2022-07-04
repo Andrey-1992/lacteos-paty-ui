@@ -1,10 +1,10 @@
 import React from 'react';
 import './editarReporteProdAdmin.css';
 
-export const editarReporteProdAdmin: React.FC = () => {
+export const EditarReporteProdAdmin: React.FC = () => {
   return (
     <div className="editarReporteProdAdmin">
-      <p>editar Reporte Prod Admin</p>
+      <p>Editar Reporte Prod Admin</p>
     </div>
   );
 };

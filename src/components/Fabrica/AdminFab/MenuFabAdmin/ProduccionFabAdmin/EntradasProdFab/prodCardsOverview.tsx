@@ -17,27 +17,43 @@ interface RecordBody {
 }
 
 interface Props {
-  filteredRecords: RecordBody
-  // changeViewStatus: (viewStatus: string, articleTitle?: string) => void
+  filteredRecords: RecordBody;
+  // detailedView: (viewStatus: string, articleTitle?: string) => void;
+  changeViewStatus: (viewStatus?: string) => void;
 }
 
-export const ProdCardsOverview: React.FC<Props> = (filteredRecords) => {
-  // let articleNaming = articleNews.title
-  const sendStatus = ():void => {
-      // changeViewStatus('overview', articleNaming)
-      console.log(filteredRecords.filteredRecords.quesoname)
+export const ProdCardsOverview: React.FC<Props> = ({filteredRecords, changeViewStatus}) => {
+
+  // const sendStatus = (event: { preventDefault: () => void; }):void => {
+  //   event.preventDefault()
+  //   // changeView('detailed')
+  //   changeViewStatus();
+  // }
+  const sendStatus = (event: { preventDefault: () => void; }):void => {
+    // changeViewStatus('detailed')
+    event.preventDefault()
+    // console.log('test56')
+    changeViewStatus('detailedView');
   }
 
   if (filteredRecords) {
+    const cleanedDate = filteredRecords.datein?.slice(0, 10).split('-').join(' / ')
     return (
-        <div className="info-prod-card-overview">
-          {/* <h2 className="overview-text">{articleNews.title}</h2>
-          <p className="overview-text">Category #{articleNews.section}</p>
-          <button className="more-info-btn" onClick={sendStatus}>More info</button> */}
-          {/* <p>{filteredRecords.datein}</p> */}
-          <p>Test</p>
-          <button className='read-prod-records-btn' onClick={sendStatus}>Buscar Reportes</button>
-        </div>
+      <div className="crearReporteProdAdmin">
+        <form className="cheese-categories-form">
+          <div className="crear-reporte-queso-marco">
+            <img className="cheese-piece-img" src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShezzrcP_kQ2aqlw0AgJqSi2UWDekCbm3JNQ&usqp=CAU'} alt={'Imagen de Pieza de Queso'} width="200" height="200"></img>
+            <h3 className="crear-reporte-queso-texto">Tipo de Queso:</h3>
+            <h3>Nombre de Queso: {filteredRecords.quesoname}</h3>
+            <h3 className="crear-reporte-queso-texto">Fecha de Entrada:</h3>
+            <h3>{cleanedDate}</h3>
+            <h4>No Piezas: {filteredRecords.nopieces}</h4>
+            <h4>No Olladas: {filteredRecords.holladas}</h4>
+            <br></br>
+            <button className='read-prod-records-btn' onClick={sendStatus}>Editar Reporte</button>
+          </div>
+        </form>
+      </div>
     );
   }
   return(<p>loading</p>)

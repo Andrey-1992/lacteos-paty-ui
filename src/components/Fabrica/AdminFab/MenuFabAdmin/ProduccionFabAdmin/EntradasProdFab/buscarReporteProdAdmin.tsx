@@ -4,11 +4,13 @@ import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import { fetchAllProdRecords } from '../FetchProductionRecords';
 import { ProdCardsOverview } from './prodCardsOverview';
+import { EditarReporteProdAdmin } from './editarReporteProdAdmin';
 
 export const BuscarReporteProdAdmin: React.FC = () => {
   const [ selectedMonth, setSelectedMonth ] = useState<any>();
   const [ selectedYear, setSelectedYear ] = useState<any>();
-  const [fetchedRecords, setFetchedRecords] = useState<any>()
+  const [ fetchedRecords, setFetchedRecords] = useState<any>();
+  const [ detailedView, setDetailedView] = useState<boolean>(false);
 
   const monthSelection = [
     {Name:'Seleccione Mes', Value:''}, {Name:'Enero', Value: '01'}, {Name:'Febrero', Value: '02'},{Name:'Marzo', Value: '03'},
@@ -48,12 +50,17 @@ export const BuscarReporteProdAdmin: React.FC = () => {
     // console.log(fetchedRecords)
   }
 
-  // const newsCardOver = fetchedRecords.map(prodRecords => <ProdCardsOverview filteredRecords={} key={} changeViewStatus={} />)
-  // if (fetchedRecords) {
-  //   const prodCardOver = fetchedRecords.map((prodRecords: any) => <ProdCardsOverview filteredRecords={prodRecords}/>)
-  // }
+  const changeViewStatus = (viewStatus?: string): void => {
+    // console.log('true12')
+    // console.log(viewStatus)
+    if (viewStatus === 'detailedView') {
+      setDetailedView(true)
+      // console.log('true')
+    }
+  }
+
   if (fetchedRecords) {
-    const prodCardOver = fetchedRecords.map((fetchedRecords: any) => <ProdCardsOverview filteredRecords={fetchedRecords}/>)
+    const prodCardOver = fetchedRecords.map((fetchedRecords: any) => <ProdCardsOverview filteredRecords={fetchedRecords} changeViewStatus={changeViewStatus}/>)
     return (
       <div className="fabrica">
         <form className="top-filter-search-prods">
@@ -76,8 +83,7 @@ export const BuscarReporteProdAdmin: React.FC = () => {
             <button className='read-prod-records-btn' onClick={readProdRecords}>Buscar Reportes</button>
           </div>
         </form>
-        {/* {fetchedRecords ? <p>{fetchedRecords[0].quesoname}</p> : <p>No hay records dentro de esta feacha</p>} */}
-        {fetchedRecords ? <p>{prodCardOver}</p> : <p>No hay records dentro de esta feacha</p>}
+        {!detailedView ? <p>{prodCardOver}</p> : <EditarReporteProdAdmin />}
         <NavLink className='go-menu-entradas-prod-admin' to="/go-menu-entradas-prod-admin">
           <p>Menu Entradas</p>
         </NavLink>
@@ -109,10 +115,14 @@ export const BuscarReporteProdAdmin: React.FC = () => {
         </div>
       </form>
       {/* {fetchedRecords ? <p>{fetchedRecords[0].quesoname}</p> : <p>No hay records dentro de esta feacha</p>} */}
-      {fetchedRecords ? <p>prodCardOver</p> : <p>No hay records dentro de esta feacha</p>}
+      {/* {fetchedRecords ? <p>prodCardOver</p> : <p>No hay records dentro de esta feacha</p>} */}
       <NavLink className='go-menu-entradas-prod-admin' to="/go-menu-entradas-prod-admin">
         <p>Menu Entradas</p>
       </NavLink>
     </div>
   );
+
+  // return (
+  //   <p>Loading...</p>
+  // )
 };

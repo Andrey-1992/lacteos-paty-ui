@@ -7,10 +7,10 @@ import { createProdRecorduction  } from '../FetchProductionRecords';
 
 export const CrearReporteProdAdmin: React.FC = () => {
     const cheeseCategory = [
-    {Name:'Seleccione Categoria', Value:''}, {Name:'Baraloso', Value:'baraloso'}, 
-    {Name:'Comiteco', Value:'comiteco'}, {Name:'Comiteco BA', Value:'comitecoBA'}, 
-    {Name:'Comiteco AA', Value:'comitecoAA'}, {Name:'Flor BA', Value:'florBA'}, 
-    {Name:'Flor AA', Value:'floorAA'}
+    {Name:'Seleccione Categoria', Value:''}, {Name:'Baraloso', Value:'Baraloso'}, 
+    {Name:'Comiteco', Value:'Comiteco'}, {Name:'Comiteco BA', Value:'Comiteco BA'}, 
+    {Name:'Comiteco AA', Value:'Comiteco AA'}, {Name:'Flor BA', Value:'Flor BA'}, 
+    {Name:'Flor AA', Value:'Flor AA'}
   ];
 
   const [ selectedCategory, setSelectedCategory ] = useState<string>('');
@@ -23,7 +23,7 @@ export const CrearReporteProdAdmin: React.FC = () => {
     event.preventDefault();
     createProdRecorduction({
       'quesoname': selectedCategory,
-      'quesostatus': 'entrada',
+      'quesostatus': 'Entrada',
       'quesoavailability': true,
       'nopieces': parseInt(selectedPieces),
       'nopiecessalida': 0,
@@ -33,7 +33,7 @@ export const CrearReporteProdAdmin: React.FC = () => {
       'datein': selectedDate,
       'dateout': selectedDate,
       'price': 0,
-      'approvepord': 'False'
+      'approvepord': 'Falso'
     })
     setIsDisable(true)
   }

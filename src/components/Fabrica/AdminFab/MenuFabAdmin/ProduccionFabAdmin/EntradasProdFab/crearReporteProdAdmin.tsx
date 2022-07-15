@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import { createProdRecorduction  } from '../FetchProductionRecords';
 
 export const CrearReporteProdAdmin: React.FC = () => {
-    const cheeseCategory = [
+  const cheeseCategory = [
     {Name:'Seleccione Categoria', Value:''}, {Name:'Baraloso', Value:'Baraloso'}, 
     {Name:'Comiteco', Value:'Comiteco'}, {Name:'Comiteco BA', Value:'Comiteco BA'}, 
     {Name:'Comiteco AA', Value:'Comiteco AA'}, {Name:'Flor BA', Value:'Flor BA'}, 
@@ -50,7 +50,7 @@ export const CrearReporteProdAdmin: React.FC = () => {
               {list.Name}
             </option>
           ))}
-        </select>
+          </select>
           <h2 className="crear-reporte-queso-texto">No piezas:</h2>
           <input type="number" className="crear-reporte-queso-num" onChange={(event) => setSelectedPieces(event.target.value)}></input>
           <h2 className="crear-reporte-queso-texto">No de Olladas:</h2>

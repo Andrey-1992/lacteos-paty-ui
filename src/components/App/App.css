@@ -2,37 +2,17 @@
   text-align: center;
   /* background-color: whitesmoke; */
 }
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+body {
+  background: linear-gradient(228deg, #781b13fe,#550b3f,#172739,#1f9ac7);
+	background-size: 400% 400%;
+	animation: gradient 100s ease infinite;
+	height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 500%;
+  color: whitesmoke;
+  margin: 3%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

@@ -1,42 +1,24 @@
-.fabVsProd {
-  /* width: 100vw;
-  height: 100vh;
-  display: grid; */
-  /* grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 8% repeat(7, 1fr); */
+.fabVsProd {  
   text-align: center;
 }
 
-.go-distribucion-register{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bold;
-  /* font-style:inherit; */
+.go-distribucion-main-menu{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold; 
+  font-style: oblique;
   font-size: 200%;
-  border-style:solid;
-  border-radius: 5%;
+  border-radius: 2%;
   padding: 2% 0% 2% 0%;
-  border-color:gray;
+  /* border-color:rgb(57, 19, 19); */
+  border: 6px solid #dad891;
   margin: 12% 40% 10% 40%;
   color: black;
+  background: #ffffff;
+  opacity: 0.75;
 }
 
-.go-distribucion-register:hover{
-  font-style:oblique;
-}
-
-.go-fabrica-register{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bold;
-  /* font-style:inherit; */
-  font-size: 200%;
-  border-style:solid;
-  border-color:black;
-  border-radius: 5%;
-  padding: 2% 0% 2% 0%;
-  margin: 12% 40% 10% 40%;
-  color: black;
-}
-
-.go-fabrica-register:hover{
-  font-style:oblique;
+.go-distribucion-main-menu:hover{
+  opacity: 0.89;
+  transform: scale(1.1);
+  transition: 0.8s ease-in-out;
 }

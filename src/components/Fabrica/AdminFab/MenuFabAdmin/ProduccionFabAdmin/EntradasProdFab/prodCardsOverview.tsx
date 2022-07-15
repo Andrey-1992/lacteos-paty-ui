@@ -19,21 +19,12 @@ interface RecordBody {
 
 interface Props {
   filteredRecords: RecordBody;
-  // detailedView: (viewStatus: string, articleTitle?: string) => void;
   changeViewStatus: (viewStatus?: string, prodId?: number) => void;
 }
 
 export const ProdCardsOverview: React.FC<Props> = ({filteredRecords, changeViewStatus}) => {
-
-  // const sendStatus = (event: { preventDefault: () => void; }):void => {
-  //   event.preventDefault()
-  //   // changeView('detailed')
-  //   changeViewStatus();
-  // }
   const sendStatus = (event: { preventDefault: () => void; }):void => {
-    // changeViewStatus('detailed')
     event.preventDefault()
-    // console.log(filteredRecords.id)
     changeViewStatus('detailedView', filteredRecords.id);
   }
 
@@ -57,5 +48,5 @@ export const ProdCardsOverview: React.FC<Props> = ({filteredRecords, changeViewS
       </div>
     );
   }
-  return(<p>loading</p>)
+  return(<p>Loading...</p>)
 }

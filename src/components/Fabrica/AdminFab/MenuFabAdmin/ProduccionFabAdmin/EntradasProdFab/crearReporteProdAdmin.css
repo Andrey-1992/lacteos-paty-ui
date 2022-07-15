@@ -13,7 +13,7 @@
 
 .crear-reporte-queso-marco:hover {
   opacity: 0.92;
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.5s ease-in-out;
 }
 

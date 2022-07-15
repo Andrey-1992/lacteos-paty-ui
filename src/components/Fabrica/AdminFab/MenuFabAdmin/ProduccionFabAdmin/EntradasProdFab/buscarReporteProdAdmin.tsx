@@ -70,7 +70,6 @@ export const BuscarReporteProdAdmin: React.FC = () => {
     if (viewStatus === 'detailedView') {
       const selectedRecod = fetchedRecords.filter((fetchedRecords: any) => fetchedRecords.id === prodId);
       setSelectedRecordById(selectedRecod[0])
-      console.log(selectedRecordById)
       setDetailedView(true)
     }
     if (viewStatus === 'overView') {
@@ -107,7 +106,6 @@ export const BuscarReporteProdAdmin: React.FC = () => {
     );
   }
 
-
   return (
     <div className="fabrica">
       <form className="top-filter-search-prods">
@@ -127,15 +125,9 @@ export const BuscarReporteProdAdmin: React.FC = () => {
         </select>
         <button className='read-prod-records-btn' onClick={readProdRecords}>Buscar Reportes</button>
       </form>
-      {/* {fetchedRecords ? <p>{fetchedRecords[0].quesoname}</p> : <p>No hay records dentro de esta feacha</p>} */}
-      {/* {fetchedRecords ? <p>prodCardOver</p> : <p>No hay records dentro de esta feacha</p>} */}
       <NavLink to="/go-menu-entradas-prod-admin">
         <p className='go-back-menu-entradas-prod-admin-busqueda'>Menu Entradas</p>
       </NavLink>
     </div>
   );
-
-  // return (
-  //   <p>Loading...</p>
-  // )
 };

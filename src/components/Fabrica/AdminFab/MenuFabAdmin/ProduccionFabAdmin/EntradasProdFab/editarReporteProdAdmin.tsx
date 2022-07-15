@@ -88,7 +88,7 @@ export const EditarReporteProdAdmin: React.FC<Props> = ({selectedRecord, changeV
             <h4>No Olladas: <input type="number" className="crear-reporte-queso-num" onChange={(event) => setSelectedOlladas(event.target.value)} value={selectedOlladas}></input></h4>
             <h4>Precio: $<input type="number" className="crear-reporte-queso-num" onChange={(event) => setSelectedPrice(event.target.value)} value={selectedPrice}></input></h4>
             <br></br>
-            <button className='read-prod-records-btn' onClick={sendStatus}>Todos los reportes</button>
+            <button className='read-prod-records-btn' onClick={sendStatus}>Editar Reporte</button>
           </div>
         </form>
       </div>

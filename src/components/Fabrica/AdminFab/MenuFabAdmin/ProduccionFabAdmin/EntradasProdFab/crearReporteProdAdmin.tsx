@@ -58,11 +58,11 @@ export const CrearReporteProdAdmin: React.FC = () => {
           <h2 className="crear-reporte-queso-texto">Fecha</h2>
           <input type="date" className="crear-reporte-queso-date" onChange={(event) => setSelectedDate(event.target.value)}></input>
           <br></br>
-          <button className='crear-reporte-queso-enviar-btn' disabled={isDisable} onClick={createProdRecord}>Enviar Reporte</button>
+          <button className='crear-reporte-queso-enviar-btn' disabled={isDisable} onClick={createProdRecord}>{!isDisable? 'Enviar Reporte' : 'Reporte Enviado' }</button>
         </div>
       </form>
       <NavLink to="/go-menu-entradas-prod-admin">
-        <p className='go-menu-entradas-prod-admin-ii'>Menu Produccion</p>
+        <p className='go-back-menu-entradas-prod-admin'>Menu Produccion</p>
       </NavLink>
     </div>
   );

@@ -10,7 +10,7 @@ export const FabricaSelection: React.FC = () => {
       </NavLink> 
       <p className='go-fad-prod-sign-in'>Produccion</p>
       <NavLink to="/">
-        <p className='go-fad-dis-menu'>Menu Inicial</p>
+        <p className='go-back-fad-dis-menu'>Menu Inicial</p>
       </NavLink>
     </div>
   );

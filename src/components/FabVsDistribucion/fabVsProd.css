@@ -9,7 +9,6 @@
   font-size: 200%;
   border-radius: 2%;
   padding: 2% 0% 2% 0%;
-  /* border-color:rgb(57, 19, 19); */
   border: 6px solid #dad891;
   margin: 12% 40% 10% 40%;
   color: black;
@@ -19,6 +18,6 @@
 
 .go-distribucion-main-menu:hover{
   opacity: 0.89;
-  transform: scale(1.1);
+  transform: scale(1.3);
   transition: 0.8s ease-in-out;
 }

@@ -64,13 +64,11 @@ export const BuscarReporteProdAdmin: React.FC = () => {
   const readProdRecords = (event: { preventDefault: () => void; }): void => {
     event.preventDefault();
     makeFetch();
-    // console.log(fetchedRecords)
   }
 
   const changeViewStatus = (viewStatus?: string, prodId?: number): void => {
     if (viewStatus === 'detailedView') {
       const selectedRecod = fetchedRecords.filter((fetchedRecords: any) => fetchedRecords.id === prodId);
-      // console.log(selectedRecod)
       setSelectedRecordById(selectedRecod[0])
       console.log(selectedRecordById)
       setDetailedView(true)
@@ -85,38 +83,6 @@ export const BuscarReporteProdAdmin: React.FC = () => {
     return (
       <div className="fabrica">
         <form className="top-filter-search-prods">
-          <div className="crear-reporte-queso-marco">
-            <select className="select-month-search" onChange={(event) => setSelectedMonth(event.target.value)}>
-            {monthSelection.map(list => (
-              <option className="option-date-style" value={list.Value}>
-                {list.Name}
-              </option>
-            ))}
-            </select>
-            <select className="select-year-search" onChange={(event) => setSelectedYear(event.target.value)}>
-            {yearSelection.map(list => (
-              <option className="option-date-style" value={list.Value}>
-                {list.Name}
-              </option>
-            ))}
-            </select>
-            <br></br>
-            <button className='read-prod-records-btn' onClick={readProdRecords}>Buscar Reportes</button>
-          </div>
-        </form>
-        {!detailedView ? <p>{prodCardOver}</p> : <EditarReporteProdAdmin selectedRecord={selectedRecordById} changeViewStatus={changeViewStatus}/>}
-        <NavLink className='go-menu-entradas-prod-admin' to="/go-menu-entradas-prod-admin">
-          <p>Menu Entradas</p>
-        </NavLink>
-      </div>
-    );
-  }
-
-
-  return (
-    <div className="fabrica">
-      <form className="top-filter-search-prods">
-        <div className="crear-reporte-queso-marco">
           <select className="select-month-search" onChange={(event) => setSelectedMonth(event.target.value)}>
           {monthSelection.map(list => (
             <option className="option-date-style" value={list.Value}>
@@ -131,14 +97,40 @@ export const BuscarReporteProdAdmin: React.FC = () => {
             </option>
           ))}
           </select>
-          <br></br>
           <button className='read-prod-records-btn' onClick={readProdRecords}>Buscar Reportes</button>
-        </div>
+        </form>
+        {!detailedView ? <p>{prodCardOver}</p> : <EditarReporteProdAdmin selectedRecord={selectedRecordById} changeViewStatus={changeViewStatus}/>}
+        <NavLink to="/go-menu-entradas-prod-admin">
+          <p className='go-back-menu-entradas-prod-admin-busqueda'>Menu Entradas</p>
+        </NavLink>
+      </div>
+    );
+  }
+
+
+  return (
+    <div className="fabrica">
+      <form className="top-filter-search-prods">
+        <select className="select-month-search" onChange={(event) => setSelectedMonth(event.target.value)}>
+        {monthSelection.map(list => (
+          <option className="option-date-style" value={list.Value}>
+            {list.Name}
+          </option>
+        ))}
+        </select>
+        <select className="select-year-search" onChange={(event) => setSelectedYear(event.target.value)}>
+        {yearSelection.map(list => (
+          <option className="option-date-style" value={list.Value}>
+            {list.Name}
+          </option>
+        ))}
+        </select>
+        <button className='read-prod-records-btn' onClick={readProdRecords}>Buscar Reportes</button>
       </form>
       {/* {fetchedRecords ? <p>{fetchedRecords[0].quesoname}</p> : <p>No hay records dentro de esta feacha</p>} */}
       {/* {fetchedRecords ? <p>prodCardOver</p> : <p>No hay records dentro de esta feacha</p>} */}
-      <NavLink className='go-menu-entradas-prod-admin' to="/go-menu-entradas-prod-admin">
-        <p>Menu Entradas</p>
+      <NavLink to="/go-menu-entradas-prod-admin">
+        <p className='go-back-menu-entradas-prod-admin-busqueda'>Menu Entradas</p>
       </NavLink>
     </div>
   );

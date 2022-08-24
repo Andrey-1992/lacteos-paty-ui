@@ -11,7 +11,7 @@ export const FabricaSelection: React.FC = () => {
       <NavLink to="/go-prod-sign-admin-in">
         <p className='go-fad-prod-sign-in'>Usuario: Produccion</p>
       </NavLink>
-      <NavLink to="">
+      <NavLink to="/go-prod-sign-dir-in">
         <p className='go-fad-prod-sign-in'>Usuario: Directivo</p>
       </NavLink>
       <NavLink to="/">

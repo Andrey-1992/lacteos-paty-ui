@@ -5,6 +5,7 @@ import { FabricaSelection } from '../Fabrica/FabricaSelection';
 import { FabVsDistribucion } from '../FabVsDistribucion/fabVsDistribucion';
 import { AdminSignIn } from '../Fabrica/AdminFab/AdminSignIn';
 import { ProdSignIn } from '../Fabrica/ProdFab/ProdSignIn';
+import { DirSignIn } from '../Fabrica/DirectivoFab/DirSignIn';
 import { MenuFabAdmin } from '../Fabrica/AdminFab/MenuFabAdmin/MenuFabAdmin';
 import { MenuFabProd } from '../Fabrica/ProdFab/MenuFabProd/MenuFabProd';
 import { ProduccionFabAdmin } from '../Fabrica/AdminFab/MenuFabAdmin/ProduccionFabAdmin/MenuProdFab/ProduccionFabAdmin';
@@ -32,6 +33,7 @@ export const App: React.FC = () => {
         <Route exact path="/fabrica-registro" render={() => <FabricaSelection />}/>
         <Route exact path="/go-fad-sign-admin-in" render={() => <AdminSignIn />}/>
         <Route exact path="/go-prod-sign-admin-in" render={() => <ProdSignIn />}/>
+        <Route exact path="/go-prod-sign-dir-in" render={() => <DirSignIn />}/>
         <Route exact path="/go-main-menu-fab-admin" render={() => <MenuFabAdmin />}/>
         <Route exact path="/go-main-menu-fab-prod" render={() => <MenuFabProd />}/>
         <Route exact path="/go-main-menu-prod-admin" render={() => <ProduccionFabAdmin/>}/>

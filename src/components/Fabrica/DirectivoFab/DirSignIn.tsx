@@ -16,7 +16,7 @@ export const DirSignIn: React.FC = () => {
             <input type="password" className="login-input"></input><span className="bar"></span>
             <label className="login-label"><i className="fas fa-key"></i>Contraseña</label>
           </div>
-          <NavLink to="/go-main-menu-fab-admin">
+          <NavLink to="/go-main-menu-fab-dir">
             <p className="login-button">Inciar Sesión</p>
           </NavLink> 
           <p className="warnings"></p>

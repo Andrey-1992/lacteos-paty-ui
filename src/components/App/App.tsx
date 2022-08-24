@@ -11,6 +11,7 @@ import { MenuFabProd } from '../Fabrica/ProdFab/MenuFabProd/MenuFabProd';
 import { MenuFabDir } from '../Fabrica/DirectivoFab/MenuFabDirectivo/MenuFabDir';
 import { ProduccionFabAdmin } from '../Fabrica/AdminFab/MenuFabAdmin/ProduccionFabAdmin/MenuProdFab/ProduccionFabAdmin';
 import { ProduccionFabProd } from '../Fabrica/ProdFab/MenuFabProd/ProduccionFabProd/MenuProdFab/ProduccionFabProd';
+import { ProduccionFabDir } from '../Fabrica/DirectivoFab/MenuFabDirectivo/ProduccionFabDir/MenuProdFab/ProduccionFabDir';
 import { MenuInProdFab } from '../Fabrica/AdminFab/MenuFabAdmin/ProduccionFabAdmin/EntradasProdFab/MenuInProdFab';
 import { MenuInProdFabProd } from '../Fabrica/ProdFab/MenuFabProd/ProduccionFabProd/EntradasProdFab/MenuInProdFabProd';
 import { MenuOutProdFab } from '../Fabrica/AdminFab/MenuFabAdmin/ProduccionFabAdmin/SalidasProdFab/MenuOutProdFab';
@@ -40,6 +41,7 @@ export const App: React.FC = () => {
         <Route exact path="/go-main-menu-fab-dir" render={() => <MenuFabDir />}/>
         <Route exact path="/go-main-menu-prod-admin" render={() => <ProduccionFabAdmin/>}/>
         <Route exact path="/go-main-menu-prod-prod" render={() => <ProduccionFabProd/>}/>
+        <Route exact path="/go-main-menu-prod-dir" render={() => <ProduccionFabDir/>}/>
         <Route exact path="/go-menu-entradas-prod-admin" render={() => <MenuInProdFab />}/>
         <Route exact path="/go-menu-entradas-prod-prod" render={() => <MenuInProdFabProd />}/>
         <Route exact path="/go-menu-salidas-prod-admin" render={() => <MenuOutProdFab />}/>

@@ -10,7 +10,7 @@ export const MenuFabAdmin: React.FC = () => {
       </NavLink>
       <p className='go-main-menu-inv-admin'>Inventario</p>
       <NavLink to="/fabrica-registro">
-        <p className='go-back-fad-singin-menu'>Menu Roles</p>
+        <p className='go-back-fad-singin-menu-1'>Menu Roles</p>
       </NavLink>
     </div>
   );

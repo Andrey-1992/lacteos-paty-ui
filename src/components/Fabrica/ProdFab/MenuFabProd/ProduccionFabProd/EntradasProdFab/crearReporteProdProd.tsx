@@ -1,17 +1,17 @@
 import React from 'react';
-import './crearReporteProdAdmin.css';
+import './crearReporteProdProd.css';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 // import { createProdRecord  } from '../Fabrica/AdminFab/MenuFabAdmin/ProduccionFabAdmin/EntradasProdFab/CrearReporteProdAdmin';
 import { createProdRecorduction  } from '../FetchProductionRecords';
 
-export const CrearReporteProdAdmin: React.FC = () => {
+export const CrearReporteProdProd: React.FC = () => {
   const [ selectedCategory, setSelectedCategory ] = useState<string>('');
   const [ selectedDate, setSelectedDate ] = useState<string>();
   const [ selectedPieces, setSelectedPieces ] = useState<any>();
   const [ selectedOlladas, setSelectedOlladas ] = useState<any>();
-  const [ selectedRefrigeration, setSelectedRefrigeration ] = useState<any>();
   const [ numLote, setNumLote ] = useState<string>();
+  const [ selectedRefrigeration, setSelectedRefrigeration ] = useState<any>();
   const [ isDisable, setIsDisable ] = useState<boolean>(false);
 
   const cheeseCategory = [
@@ -80,7 +80,7 @@ export const CrearReporteProdAdmin: React.FC = () => {
           <button className='crear-reporte-queso-enviar-btn' disabled={isDisable} onClick={createProdRecord}>{!isDisable? 'Enviar Reporte' : 'Reporte Enviado' }</button>
         </div>
       </form>
-      <NavLink to="/go-menu-entradas-prod-admin">
+      <NavLink to="/go-main-menu-prod-prod">
         <p className='go-back-menu-entradas-prod-admin'>Menu Produccion</p>
       </NavLink>
     </div>

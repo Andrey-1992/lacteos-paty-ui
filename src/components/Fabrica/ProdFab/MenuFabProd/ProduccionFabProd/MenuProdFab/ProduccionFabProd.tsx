@@ -1,10 +1,10 @@
-import './ProduccionFabAdmin.css';
+import './ProduccionFabProd.css';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { fetchAllProdRecords } from '../FetchProductionRecords';
 
-export const ProduccionFabAdmin: React.FC = () => {
+export const ProduccionFabProd: React.FC = () => {
   const [ baralosoStorage, setBaralosoStorage ] = useState<number>(0);
   const [ comitecoStorage, setComitecoStorage ] = useState<number>(0);
   const [ comitecoAaStorage, setComitecoAaStorage ] = useState<number>(0);
@@ -101,13 +101,13 @@ export const ProduccionFabAdmin: React.FC = () => {
         </div>
       </div>
       <div className = 'menu-text-styling'>
-        <NavLink to="/go-menu-salidas-prod-admin">
+        <NavLink to="/go-menu-salidas-prod-prod">
           <p className='go-menu-salidas-prod-admin'>Salida De Queso</p>
         </NavLink>
-        <NavLink to="/go-main-menu-fab-admin">
+        <NavLink to="/go-main-menu-fab-prod">
           <p className='go-back-fad-singin-menu'>Menu Administracion</p>
         </NavLink>
-        <NavLink to="/go-menu-entradas-prod-admin">
+        <NavLink to="/go-menu-entradas-prod-prod">
           <p className='go-menu-entradas-prod-admin'>Entrada De Queso</p>
         </NavLink>
       </div>

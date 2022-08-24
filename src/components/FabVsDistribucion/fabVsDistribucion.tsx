@@ -6,10 +6,10 @@ export const FabVsDistribucion: React.FC = () => {
   return (
     <div className="fabVsProd">
       <NavLink to="/">
-        <p className='go-distribucion-register'>Distribucion</p>  
+        <p className='go-distribucion-main-menu'>Distribucion</p>  
       </NavLink>
       <NavLink to="/fabrica-registro">
-        <p className='go-fabrica-register'>Fabrica</p>
+        <p className='go-distribucion-main-menu'>Fabrica</p>
       </NavLink>
     </div>
   );

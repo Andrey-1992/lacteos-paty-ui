@@ -1,8 +1,8 @@
 import React from 'react';
-import './AdminSignIn.css';
+import './ProdSignIn.css';
 import { NavLink } from 'react-router-dom';
 
-export const AdminSignIn: React.FC = () => {
+export const ProdSignIn: React.FC = () => {
   return (
     <div className="adminSignIn">
       <div className="login-form-container">
@@ -16,7 +16,7 @@ export const AdminSignIn: React.FC = () => {
             <input type="password" className="login-input"></input><span className="bar"></span>
             <label className="login-label"><i className="fas fa-key"></i>Contraseña</label>
           </div>
-          <NavLink to="/go-main-menu-fab-admin">
+          <NavLink to="/go-main-menu-fab-prod">
             <p className="login-button">Inciar Sesión</p>
           </NavLink> 
           <p className="warnings"></p>

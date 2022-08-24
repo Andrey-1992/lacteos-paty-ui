@@ -1,12 +1,12 @@
 /* Top Filter Styling */
-.top-filter-search-prods {
+/* .top-filter-search-prods {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
   font-style:solid;
   border-style:solid;
   border-radius: 2%;
   border: 5px solid #dad891;
-  margin: 3% 20% 2% 20%;
+  margin: 3% 25% 2% 25%;
   padding: 2%;
   color: black;
   background: #ffffff;
@@ -17,38 +17,38 @@
   opacity: 0.93;
   transform: scale(1.1);
   transition: 0.5s ease-in-out;
-}
+} */
 
 /* Button and Filters Styling Section */
-.select-month-search {
-  margin: 0% 1% 0% 1%;
+/* .select-month-search {
+  margin: 0% 2% 0% 2%;
   padding: 1%;
   font-weight: bolder;
   font-style:unset;
-  font-size: 110%;
+  font-size: 120%;
   border-radius: 4%;
   border: 2px solid black;
 }
 
 .select-year-search {
-  margin: 0% 1% 0% 1%;
+  margin: 0% 2% 0% 2%;
   padding: 1%;
   font-weight: bolder;
   font-style:unset;
-  font-size: 110%;
+  font-size: 120%;
   border-radius: 4%;
   border: 2px solid black;
 }
 
 .read-prod-records-btn {
-  margin: 0% 1% 0% 1%;
+  margin: 0% 2% 0% 2%;
   padding: 1%;
   font-weight: bolder;
   font-style:unset;
-  font-size: 110%;
+  font-size: 120%;
   border-radius: 4%;
   border: 2px solid black;
-}
+} */
 
 /* Go Back to Menu Btn */
 .go-back-menu-entradas-prod-admin-busqueda{

@@ -1,10 +1,10 @@
 import React from 'react';
-import './buscarReporteProdAdmin.css';
+// import './buscarReporteOutProdAdmin.css';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import { fetchAllProdRecords } from '../FetchProductionRecords';
-import { ProdCardsOverview } from './prodCardsOverview';
-import { EditarReporteProdAdmin } from './editarReporteProdAdmin';
+import { ProdOutCardsOverviewProd } from './prodOutCardsOverviewProd';
+import { EditarReporteOutProdProd } from './editarReporteOutProdProd';
 
 interface RecordBody {
   id?: number,
@@ -22,7 +22,7 @@ interface RecordBody {
   approvepord?: string
 }
 
-export const BuscarReporteProdAdmin: React.FC = () => {
+export const ReporteSalidaCreadosProd: React.FC = () => {
   const [ selectedCategory, setSelectedCategory ] = useState<any>();
   const [ selectedMonth, setSelectedMonth ] = useState<any>();
   const [ selectedYear, setSelectedYear ] = useState<any>();
@@ -52,12 +52,13 @@ export const BuscarReporteProdAdmin: React.FC = () => {
   const filterDataByDate = (data:any): void => {
     const dataFiltered = data.reduce((acc:any, dataRecords: any) => {
       const cheeseCat = dataRecords.quesoname;
+      const status = dataRecords.quesostatus;
       const yearData = dataRecords.datein.split('-')[0];
-      const monthData = dataRecords.datein.split('-')[1]
-      if (yearData === selectedYear && monthData === selectedMonth && selectedCategory === 'Todos' && dataRecords.quesostatus === 'Entrada') {
+      const monthData = dataRecords.datein.split('-')[1];
+      if (status === "Salida" && yearData === selectedYear && monthData === selectedMonth && selectedCategory === 'Todos') {
         acc.push(dataRecords)
       }
-      if (yearData === selectedYear && monthData === selectedMonth && selectedCategory === cheeseCat && dataRecords.quesostatus === 'Entrada') {
+      if (status === "Salida" && yearData === selectedYear && monthData === selectedMonth && selectedCategory === cheeseCat) {
         acc.push(dataRecords)
       }
       return acc;
@@ -88,7 +89,7 @@ export const BuscarReporteProdAdmin: React.FC = () => {
   }
 
   if (fetchedRecords) {
-    const prodCardOver = fetchedRecords.map((fetchedRecords: any) => <ProdCardsOverview filteredRecords={fetchedRecords} changeViewStatus={changeViewStatus}/>)
+    const prodCardOver = fetchedRecords.map((fetchedRecords: any) => <ProdOutCardsOverviewProd filteredRecords={fetchedRecords} changeViewStatus={changeViewStatus}/>)
     return (
       <div className="fabrica">
         <form className="top-filter-search-prods">
@@ -115,9 +116,9 @@ export const BuscarReporteProdAdmin: React.FC = () => {
           </select>
           <button className='read-prod-records-btn' onClick={readProdRecords}>Buscar Reportes</button>
         </form>
-        {!detailedView ? <p>{prodCardOver}</p> : <EditarReporteProdAdmin selectedRecord={selectedRecordById} changeViewStatus={changeViewStatus}/>}
-        <NavLink to="/go-menu-entradas-prod-admin">
-          <p className='go-back-menu-entradas-prod-admin-busqueda'>Menu Entradas</p>
+        {!detailedView ? <p>{prodCardOver}</p> : <EditarReporteOutProdProd selectedRecord={selectedRecordById} changeViewStatus={changeViewStatus}/>}
+        <NavLink to="/go-menu-salidas-prod-prod">
+          <p className='go-back-menu-entradas-prod-admin-busqueda'>Menu Salidas</p>
         </NavLink>
       </div>
     );
@@ -149,8 +150,8 @@ export const BuscarReporteProdAdmin: React.FC = () => {
         </select>
         <button className='read-prod-records-btn' onClick={readProdRecords}>Buscar Reportes</button>
       </form>
-      <NavLink to="/go-menu-entradas-prod-admin">
-        <p className='go-back-menu-entradas-prod-admin-busqueda'>Menu Entradas</p>
+      <NavLink to="/go-menu-salidas-prod-prod">
+        <p className='go-back-menu-entradas-prod-admin-busqueda'>Menu Salidas</p>
       </NavLink>
     </div>
   );

@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 export const MenuFabDir: React.FC = () => {
   return (
     <div className="menu-fab-admin">
-      <NavLink to="/go-main-menu-prod-admin">
+      <NavLink to="/go-main-menu-prod-dir">
         <p className='go-main-menu-prod-admin'>Produccion</p>
       </NavLink>
       <p className='go-main-menu-inv-admin'>Inventario</p>

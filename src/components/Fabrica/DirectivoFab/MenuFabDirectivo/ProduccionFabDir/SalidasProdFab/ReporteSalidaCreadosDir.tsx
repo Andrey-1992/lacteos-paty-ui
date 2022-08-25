@@ -21,7 +21,7 @@ interface RecordBody {
   approvepord?: string
 }
 
-export const ReporteSalidaCreados: React.FC = () => {
+export const ReporteSalidaCreadosDir: React.FC = () => {
   const [ selectedCategory, setSelectedCategory ] = useState<any>();
   const [ selectedMonth, setSelectedMonth ] = useState<any>();
   const [ selectedYear, setSelectedYear ] = useState<any>();
@@ -88,7 +88,7 @@ export const ReporteSalidaCreados: React.FC = () => {
   }
 
   if (fetchedRecords) {
-    const prodCardOver = fetchedRecords.map((fetchedRecords: any) => <ProdOutCardsOverview filteredRecords={fetchedRecords} changeViewStatus={changeViewStatus}/>)
+    const prodCardOver = fetchedRecords.map((fetchedRecords: any) => <ProdOutCardsOverviewDir filteredRecords={fetchedRecords} changeViewStatus={changeViewStatus}/>)
     return (
       <div className="fabrica">
         <form className="top-filter-search-prods">
@@ -115,8 +115,9 @@ export const ReporteSalidaCreados: React.FC = () => {
           </select>
           <button className='read-prod-records-btn' onClick={readProdRecords}>Buscar Reportes</button>
         </form>
-        {!detailedView ? <p>{prodCardOver}</p> : <EditarReporteOutProdAdmin selectedRecord={selectedRecordById} changeViewStatus={changeViewStatus}/>}
-        <NavLink to="/go-menu-salidas-prod-admin">
+        <p>{prodCardOver}</p>
+        {/* {!detailedView ? <p>{prodCardOver}</p> : <EditarReporteOutProdAdmin selectedRecord={selectedRecordById} changeViewStatus={changeViewStatus}/>} */}
+        <NavLink to="/go-menu-salidas-prod-dir">
           <p className='go-back-menu-entradas-prod-admin-busqueda'>Menu Salidas</p>
         </NavLink>
       </div>
@@ -149,7 +150,7 @@ export const ReporteSalidaCreados: React.FC = () => {
         </select>
         <button className='read-prod-records-btn' onClick={readProdRecords}>Buscar Reportes</button>
       </form>
-      <NavLink to="/go-menu-salidas-prod-admin">
+      <NavLink to="/go-menu-salidas-prod-dir">
         <p className='go-back-menu-entradas-prod-admin-busqueda'>Menu Salidas</p>
       </NavLink>
     </div>

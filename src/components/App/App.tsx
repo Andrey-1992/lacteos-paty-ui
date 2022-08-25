@@ -23,6 +23,7 @@ import { BuscarReporteOutProdAdmin } from '../Fabrica/AdminFab/MenuFabAdmin/Prod
 import { BuscarReporteProdDir } from '../Fabrica/DirectivoFab/MenuFabDirectivo/ProduccionFabDir/EntradasProdFab/BuscarReporteProdDir';
 import { BuscarReporteOutProdProd } from '../Fabrica/ProdFab/MenuFabProd/ProduccionFabProd/SalidasProdFab/buscarReporteOutProdProd';
 import { CrearNotaProdAdmin } from '../Fabrica/AdminFab/MenuFabAdmin/ProduccionFabAdmin/EntradasProdFab/crearNotaProdAdmin';
+import { CrearNotaDir } from '../Fabrica/DirectivoFab/MenuFabDirectivo/ProduccionFabDir/EntradasProdFab/CrearNotaProdDir';
 import { CrearReporteProdAdmin } from '../Fabrica/AdminFab/MenuFabAdmin/ProduccionFabAdmin/EntradasProdFab/crearReporteProdAdmin';
 import { CrearReporteProdProd } from '../Fabrica/ProdFab/MenuFabProd/ProduccionFabProd/EntradasProdFab/crearReporteProdProd';
 import { CrearNotaProdOutAdmin } from '../Fabrica/AdminFab/MenuFabAdmin/ProduccionFabAdmin/SalidasProdFab/crearNotaProdOutAdmin';
@@ -60,6 +61,7 @@ export const App: React.FC = () => {
         <Route exact path="/go-menu-reportes-salidas-creados-prod-admin" render={() => <ReporteSalidaCreados />}/>
         <Route exact path="/go-menu-reportes-salidas-creados-prod-prod" render={() => <ReporteSalidaCreadosProd />}/>
         <Route exact path="/go-menu-entradas-crear-nota-prod-admin" render={() => <CrearNotaProdAdmin />}/>
+        <Route exact path="/go-menu-entradas-crear-nota-prod-dir" render={() => <CrearNotaDir />}/>
         <Route exact path="/go-menu-salidas-crear-nota-prod-admin" render={() => <CrearNotaProdOutAdmin />}/>
       </Switch>
     </div>

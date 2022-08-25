@@ -1,8 +1,7 @@
 import React from 'react';
-import './crearNotaProdDir.css';
+import './CrearNotaProdDir.css';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
-// import { MonthlyProdReport } from './monthlyProdReport';
 import { fetchAllProdRecords } from '../FetchProductionRecords';
 
 interface RecordBody {
@@ -662,7 +661,7 @@ export const CrearNotaDir: React.FC = () => {
             <p className="report-total-comiteco-ba-pz">{totalComitecoBaPz} pz</p>
             <p className="report-total-comiteco-ba-olls">{totalComitecoBaOlls} ollas</p>
           </div>
-          <NavLink to="/go-menu-entradas-prod-admin">
+          <NavLink to="/go-menu-entradas-prod-dir">
             <p className='go-back-menu-entradas-prod-admin-busqueda'>Menu Entradas</p>
           </NavLink>
         </div>
@@ -690,7 +689,7 @@ export const CrearNotaDir: React.FC = () => {
           </select>
           <button className='read-prod-records-btn' onClick={readProdRecords}>Crear Reporte</button>
         </form>
-        <NavLink to="/go-menu-entradas-prod-admin">
+        <NavLink to="/go-menu-entradas-prod-dir">
           <p className='go-back-menu-entradas-prod-admin-busqueda'>Menu Entradas</p>
         </NavLink>
       </div>

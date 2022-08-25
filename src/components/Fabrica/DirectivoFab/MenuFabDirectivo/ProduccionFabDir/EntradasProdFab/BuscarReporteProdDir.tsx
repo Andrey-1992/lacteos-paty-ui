@@ -1,10 +1,9 @@
 import React from 'react';
-import './buscarReporteProdAdmin.css';
+import './BuscarReporteProdDir.css';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import { fetchAllProdRecords } from '../FetchProductionRecords';
-import { ProdCardsOverview } from './prodCardsOverview';
-import { EditarReporteProdAdmin } from './editarReporteProdAdmin';
+import { ProdCardsOverviewDir } from './ProdCardsOverviewDir';
 
 interface RecordBody {
   id?: number,
@@ -88,7 +87,7 @@ export const BuscarReporteProdDir: React.FC = () => {
   }
 
   if (fetchedRecords) {
-    const prodCardOver = fetchedRecords.map((fetchedRecords: any) => <ProdCardsOverview filteredRecords={fetchedRecords} changeViewStatus={changeViewStatus}/>)
+    const prodCardOver = fetchedRecords.map((fetchedRecords: any) => <ProdCardsOverviewDir filteredRecords={fetchedRecords} changeViewStatus={changeViewStatus}/>)
     return (
       <div className="fabrica">
         <form className="top-filter-search-prods">
@@ -115,8 +114,8 @@ export const BuscarReporteProdDir: React.FC = () => {
           </select>
           <button className='read-prod-records-btn' onClick={readProdRecords}>Buscar Reportes</button>
         </form>
-        {!detailedView ? <p>{prodCardOver}</p> : <EditarReporteProdAdmin selectedRecord={selectedRecordById} changeViewStatus={changeViewStatus}/>}
-        <NavLink to="/go-menu-entradas-prod-admin">
+        <p>{prodCardOver}</p>
+        <NavLink to="/go-menu-entradas-prod-dir">
           <p className='go-back-menu-entradas-prod-admin-busqueda'>Menu Entradas</p>
         </NavLink>
       </div>
@@ -149,7 +148,7 @@ export const BuscarReporteProdDir: React.FC = () => {
         </select>
         <button className='read-prod-records-btn' onClick={readProdRecords}>Buscar Reportes</button>
       </form>
-      <NavLink to="/go-menu-entradas-prod-admin">
+      <NavLink to="/go-menu-entradas-prod-dir">
         <p className='go-back-menu-entradas-prod-admin-busqueda'>Menu Entradas</p>
       </NavLink>
     </div>

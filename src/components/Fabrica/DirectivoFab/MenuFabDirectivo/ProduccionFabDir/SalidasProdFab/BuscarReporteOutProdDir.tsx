@@ -1,5 +1,5 @@
 import React from 'react';
-import './buscarReporteOutProdAdmin.css';
+import './BuscarReporteOutProdDir.css';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import { fetchAllProdRecords } from '../FetchProductionRecords';

@@ -1,4 +1,4 @@
-import './prodOutCardsOverviewDir.css';
+import './ProdOutCardsOverviewDir.css';
 import React from 'react';
 
 interface RecordBody {

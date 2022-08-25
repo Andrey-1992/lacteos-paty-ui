@@ -19,9 +19,10 @@ import { MenuOutProdFab } from '../Fabrica/AdminFab/MenuFabAdmin/ProduccionFabAd
 import { MenuOutProdFabProd } from '../Fabrica/ProdFab/MenuFabProd/ProduccionFabProd/SalidasProdFab/MenuOutProdFabProd';
 import { MenuOutProdFabDir } from '../Fabrica/DirectivoFab/MenuFabDirectivo/ProduccionFabDir/SalidasProdFab/MenuOutProdFabDir';
 import { BuscarReporteProdAdmin } from '../Fabrica/AdminFab/MenuFabAdmin/ProduccionFabAdmin/EntradasProdFab/buscarReporteProdAdmin';
-import { BuscarReporteOutProdAdmin } from '../Fabrica/AdminFab/MenuFabAdmin/ProduccionFabAdmin/SalidasProdFab/buscarReporteOutProdAdmin';
 import { BuscarReporteProdDir } from '../Fabrica/DirectivoFab/MenuFabDirectivo/ProduccionFabDir/EntradasProdFab/BuscarReporteProdDir';
+import { BuscarReporteOutProdAdmin } from '../Fabrica/AdminFab/MenuFabAdmin/ProduccionFabAdmin/SalidasProdFab/buscarReporteOutProdAdmin';
 import { BuscarReporteOutProdProd } from '../Fabrica/ProdFab/MenuFabProd/ProduccionFabProd/SalidasProdFab/buscarReporteOutProdProd';
+import { BuscarReporteOutProdDir } from '../Fabrica/DirectivoFab/MenuFabDirectivo/ProduccionFabDir/SalidasProdFab/BuscarReporteOutProdDir';
 import { CrearNotaProdAdmin } from '../Fabrica/AdminFab/MenuFabAdmin/ProduccionFabAdmin/EntradasProdFab/crearNotaProdAdmin';
 import { CrearNotaDir } from '../Fabrica/DirectivoFab/MenuFabDirectivo/ProduccionFabDir/EntradasProdFab/CrearNotaProdDir';
 import { CrearReporteProdAdmin } from '../Fabrica/AdminFab/MenuFabAdmin/ProduccionFabAdmin/EntradasProdFab/crearReporteProdAdmin';
@@ -53,9 +54,10 @@ export const App: React.FC = () => {
         <Route exact path="/go-menu-salidas-prod-prod" render={() => <MenuOutProdFabProd />}/>
         <Route exact path="/go-menu-salidas-prod-dir" render={() => <MenuOutProdFabDir />}/>
         <Route exact path="/go-menu-entradas-busqueda-prod-admin" render={() => <BuscarReporteProdAdmin />}/>
-        <Route exact path="/go-menu-salidas-busqueda-prod-admin" render={() => <BuscarReporteOutProdAdmin />}/>
         <Route exact path="/go-menu-entradas-busqueda-prod-dir" render={() => <BuscarReporteProdDir />}/>
+        <Route exact path="/go-menu-salidas-busqueda-prod-admin" render={() => <BuscarReporteOutProdAdmin />}/>
         <Route exact path="/go-menu-salidas-busqueda-prod-prod" render={() => <BuscarReporteOutProdProd />}/>
+        <Route exact path="/go-menu-salidas-busqueda-prod-dir" render={() => <BuscarReporteOutProdDir />}/>
         <Route exact path="/go-menu-entradas-crear-reporte-prod-admin" render={() => <CrearReporteProdAdmin />}/>
         <Route exact path="/go-menu-entradas-crear-reporte-prod-prod" render={() => <CrearReporteProdProd />}/>
         <Route exact path="/go-menu-reportes-salidas-creados-prod-admin" render={() => <ReporteSalidaCreados />}/>

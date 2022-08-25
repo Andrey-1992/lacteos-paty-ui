@@ -67,7 +67,7 @@ export const ProduccionFabAdmin: React.FC = () => {
     <div className="ProduccionFabAdmin">
       <div className='cheese-invetory-container-header'>
         <h2 className="inventario-fab-text">
-          Inventario Fabrica
+          Inventario Fabrica (Admin)
         </h2>
         <br></br>
         <h2 className="inventario-fab-text">

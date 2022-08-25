@@ -47,7 +47,7 @@ export const ProdOutCardsOverviewDir: React.FC<Props> = ({filteredRecords, chang
             <h4 className="crear-reporte-queso-texto">Fecha Ultima Salida:</h4>
             <h4>{cleanedDateOut}</h4>
             <br></br>
-            <button className='read-prod-records-btn' onClick={sendStatus}>Editar Reporte</button>
+            {/* <button className='read-prod-records-btn' onClick={sendStatus}>Editar Reporte</button> */}
           </div>
         </form>
       </div>

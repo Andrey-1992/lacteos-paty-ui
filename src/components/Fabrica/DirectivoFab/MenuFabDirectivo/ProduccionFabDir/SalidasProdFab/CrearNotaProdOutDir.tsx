@@ -20,7 +20,7 @@ interface RecordBody {
   approvepord?: string
 }
 
-export const CrearNotaProdOutAdmin: React.FC = () => {
+export const CrearNotaProdOutDir: React.FC = () => {
   const [ fetchedRecords, setFetchedRecords] = useState<any>([]);
   const [ selectedDate, setSelectedDate ] = useState<any>();
   const [ totalBaralosoDate, setTotalBaralosoDate ] =  useState<any>();

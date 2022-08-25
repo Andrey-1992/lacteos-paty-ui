@@ -28,6 +28,7 @@ import { CrearNotaDir } from '../Fabrica/DirectivoFab/MenuFabDirectivo/Produccio
 import { CrearReporteProdAdmin } from '../Fabrica/AdminFab/MenuFabAdmin/ProduccionFabAdmin/EntradasProdFab/crearReporteProdAdmin';
 import { CrearReporteProdProd } from '../Fabrica/ProdFab/MenuFabProd/ProduccionFabProd/EntradasProdFab/crearReporteProdProd';
 import { CrearNotaProdOutAdmin } from '../Fabrica/AdminFab/MenuFabAdmin/ProduccionFabAdmin/SalidasProdFab/crearNotaProdOutAdmin';
+import { CrearNotaProdOutDir } from '../Fabrica/DirectivoFab/MenuFabDirectivo/ProduccionFabDir/SalidasProdFab/CrearNotaProdOutDir';
 import { ReporteSalidaCreados } from '../Fabrica/AdminFab/MenuFabAdmin/ProduccionFabAdmin/SalidasProdFab/reporteSalidaCreadosProd';
 import { ReporteSalidaCreadosProd } from '../Fabrica/ProdFab/MenuFabProd/ProduccionFabProd/SalidasProdFab/reportesSalidasCreadosProd';
 import { ReporteSalidaCreadosDir } from '../Fabrica/DirectivoFab/MenuFabDirectivo/ProduccionFabDir/SalidasProdFab/ReporteSalidaCreadosDir';
@@ -67,6 +68,7 @@ export const App: React.FC = () => {
         <Route exact path="/go-menu-entradas-crear-nota-prod-admin" render={() => <CrearNotaProdAdmin />}/>
         <Route exact path="/go-menu-entradas-crear-nota-prod-dir" render={() => <CrearNotaDir />}/>
         <Route exact path="/go-menu-salidas-crear-nota-prod-admin" render={() => <CrearNotaProdOutAdmin />}/>
+        <Route exact path="/go-menu-salidas-crear-nota-prod-dir" render={() => <CrearNotaProdOutDir />}/>
       </Switch>
     </div>
   );

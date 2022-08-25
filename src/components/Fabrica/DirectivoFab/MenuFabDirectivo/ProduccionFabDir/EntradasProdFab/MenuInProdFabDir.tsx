@@ -8,11 +8,8 @@ export const MenuInProdFabDir: React.FC = () => {
       <NavLink to="/go-menu-entradas-busqueda-prod-dir">
         <p className='go-menu-entradas-busqueda-prod-admin'>Buscar Reporte</p>
       </NavLink>
-      <NavLink to="/go-menu-entradas-crear-reporte-prod-dir">
-        <p className='go-menu-entradas-crear-reporte-prod-admin'>Crear Reporte</p>
-      </NavLink>
       <NavLink to="/go-menu-entradas-crear-nota-prod-dir">
-        <p className='go-menu-entradas-crear-nota-prod-admin'>Crear Nota</p>
+        <p className='go-menu-entradas-crear-nota-prod-admin'>Generar Nota</p>
       </NavLink>
       <NavLink to="/go-main-menu-prod-dir">
         <p className='go-main-menu-prod-admin-btn'>Menu Produccion</p>

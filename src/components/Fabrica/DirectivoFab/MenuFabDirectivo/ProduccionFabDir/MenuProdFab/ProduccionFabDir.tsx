@@ -1,10 +1,10 @@
-import './ProduccionFabAdmin.css';
+import './ProduccionFabDir.css';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { fetchAllProdRecords } from '../FetchProductionRecords';
 
-export const ProduccionFabAdmin: React.FC = () => {
+export const ProduccionFabDir: React.FC = () => {
   const [ baralosoStorage, setBaralosoStorage ] = useState<number>(0);
   const [ comitecoStorage, setComitecoStorage ] = useState<number>(0);
   const [ comitecoAaStorage, setComitecoAaStorage ] = useState<number>(0);
@@ -67,7 +67,7 @@ export const ProduccionFabAdmin: React.FC = () => {
     <div className="ProduccionFabAdmin">
       <div className='cheese-invetory-container-header'>
         <h2 className="inventario-fab-text">
-          Inventario Fabrica (Admin)
+          Inventario Fabrica (Dir)
         </h2>
         <br></br>
         <h2 className="inventario-fab-text">
@@ -101,13 +101,13 @@ export const ProduccionFabAdmin: React.FC = () => {
         </div>
       </div>
       <div className = 'menu-text-styling'>
-        <NavLink to="/go-menu-salidas-prod-admin">
+        <NavLink to="/go-menu-salidas-prod-dir">
           <p className='go-menu-salidas-prod-admin'>Salida De Queso</p>
         </NavLink>
-        <NavLink to="/go-main-menu-fab-admin">
+        <NavLink to="/go-main-menu-fab-dir">
           <p className='go-back-fad-singin-menu'>Menu Administracion</p>
         </NavLink>
-        <NavLink to="/go-menu-entradas-prod-admin">
+        <NavLink to="/go-menu-entradas-prod-dir">
           <p className='go-menu-entradas-prod-admin'>Entrada De Queso</p>
         </NavLink>
       </div>

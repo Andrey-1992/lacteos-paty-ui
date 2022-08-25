@@ -101,13 +101,13 @@ export const ProduccionFabDir: React.FC = () => {
         </div>
       </div>
       <div className = 'menu-text-styling'>
-        <NavLink to="/go-menu-salidas-prod-admin">
+        <NavLink to="/go-menu-salidas-prod-dir">
           <p className='go-menu-salidas-prod-admin'>Salida De Queso</p>
         </NavLink>
-        <NavLink to="/go-main-menu-fab-admin">
+        <NavLink to="/go-main-menu-fab-dir">
           <p className='go-back-fad-singin-menu'>Menu Administracion</p>
         </NavLink>
-        <NavLink to="/go-menu-entradas-prod-admin">
+        <NavLink to="/go-menu-entradas-prod-dir">
           <p className='go-menu-entradas-prod-admin'>Entrada De Queso</p>
         </NavLink>
       </div>

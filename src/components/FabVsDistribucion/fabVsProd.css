@@ -31,13 +31,13 @@
 
 /* iPad Layouts (max-width: 1000px) */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1080px) {
   .go-distribucion-main-menu{
     font-size: 150%;
     border-radius: 2%;
     padding: 2% 0% 2% 0%;
     border: 6px solid #dad891;
-    margin: 15% 40% 10% 40%;
+    margin: 15% 30% 10% 30%;
     color: black;
     background: #ffffff;
     opacity: 0.75;
@@ -45,5 +45,24 @@
 
   .go-distribucion-main-menu:hover{
     transform: scale(1.1);
+  }
+}
+
+/* Phone Layouts (max-width: 400px) */
+
+@media screen and (max-width: 400px) {
+  .go-distribucion-main-menu{
+    font-size: 120%;
+    border-radius: 2%;
+    padding: 4% 0% 4% 0%;
+    border: 6px solid #dad891;
+    margin: 15% 30% 10% 30%;
+    color: black;
+    background: #ffffff;
+    opacity: 0.75;
+  }
+
+  .go-distribucion-main-menu:hover{
+    transform: scale(1.05);
   }
 }

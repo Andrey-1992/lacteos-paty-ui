@@ -201,15 +201,57 @@
   
 }
 
-/* Phone Layouts (max-width: 650px) */
+/* Phone Layouts (max-width: 700px) */
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
+  .inventario-fab-text {
+    font-size: 130%;
+  }
+
+  .cheese-invetory-container-header {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+  }
+  
+  .cheese-invetory-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .menu-text-styling {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .inventario-fab-text {
     font-size: 150%;
   }
 
-  .menu-text-styling {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+  .go-menu-salidas-prod-admin {
+    font-size: 100%;
+    margin: 9% 25% 9% 25%;
+  }
+
+  .go-menu-salidas-prod-admin:hover{
+    transform: scale(1.05);
+  }
+
+  .go-back-fad-singin-menu {
+    font-size: 100%;
+    margin: 9% 25% 9% 25%;
+  }
+
+  .go-back-fad-singin-menu:hover{
+    transform: scale(1.05);
+  }
+
+  .go-menu-entradas-prod-admin {
+    font-size: 100%;
+    margin: 9% 25% 9% 25%;
+  }
+
+  .go-menu-entradas-prod-admin:hover{
+    transform: scale(1.05);
   }
 }
